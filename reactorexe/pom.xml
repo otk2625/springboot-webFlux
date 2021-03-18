@@ -10,5 +10,14 @@
 			<artifactId>reactive-streams</artifactId>
 			<version>1.0.3</version>
 		</dependency>
-	</dependencies>
+		
+		
+  <dependency>
+    <groupId>com.merakianalytics.orianna</groupId>
+    <artifactId>orianna</artifactId>
+    <version>4.0.0-rc7</version>
+  </dependency>
+  
+</dependencies>
+	
 </project>
