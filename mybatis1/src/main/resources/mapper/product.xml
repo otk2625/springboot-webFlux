@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.mybatis1.repository.ProductRepository">
+ 	<insert id="save"> <!-- sql문 작성시 끝에 세미콜론 적으면 안됨 -->
+ 		INSERT INTO product(name, code) VALUES(#{name}, #{code})
+ 	</insert>
+ 	
+ 	<!-- Delete -->
+  	<delete id="delete">
+  		delete from product where id = #{id}
+ 	</delete>
+ 	
+ 	<!-- update -->
+ 	<update id="update">
+ 		UPDATE product SET name=#{name}, code=#{code} WHERE id=#{id}
+ 	</update>
+ 	
+ 	<select id="findAll" resultType="com.cos.mybatis1.model.Product">
+ 		SELECT * FROM product
+ 	</select>
+ 	
+ 	<select id="findById" resultType="com.cos.mybatis1.model.Product">
+ 		SELECT * FROM product WHERE id=#{id}
+ 	</select>
+</mapper>

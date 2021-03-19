@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.mybatis1.repository.PanmaeRepository">
+ 	
+ 	<select id="findByIdAndJoin" resultType="com.cos.mybatis1.model.beans.PanmaeBean">
+ 		select pm.id, pm.username, pd.name, pd.code from panmae pm inner join product pd ON pm.productid = pd.id where pm.id = #{id} 
+ 	</select>
+</mapper>
